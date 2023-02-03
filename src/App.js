@@ -1,5 +1,6 @@
 import './components/Costs/CostItem.css'
 import Costs from "./components/Costs/Costs";
+import NewCost from "./components/NewCost/NewCost";
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
     return (
         <div>
             <h1>SPA_React</h1>
+            <NewCost/>
             <Costs props={costs}/>
         </div>
     );
