@@ -1,25 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+import './components/Costs/CostItem.css'
+import Costs from "./components/Costs/Costs";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const costs = [
+        {
+            costDate: new Date(2023, 0, 2),
+            description: 'Phone',
+            amount: 340,
+            id: 1,
+        },
+        {
+            costDate: new Date(2023, 1, 2),
+            description: 'T-shirt',
+            amount: 40,
+            id: 2,
+        },
+        {
+            costDate: new Date(2023, 0, 12),
+            description: 'Mouse',
+            amount: 20,
+            id: 3,
+        },
+        {
+            costDate: new Date(2023, 0, 22),
+            description: 'Pen',
+            amount: 2,
+            id: 4,
+        },
+        {
+            costDate: new Date(2023, 0, 22),
+            description: 'Apple',
+            amount: 1,
+            id: 5,
+        },
+    ]
+
+    return (
+        <div>
+            <h1>SPA_React</h1>
+            <Costs props={costs}/>
+        </div>
+    );
 }
 
 export default App;
