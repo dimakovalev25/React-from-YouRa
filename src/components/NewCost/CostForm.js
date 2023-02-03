@@ -2,19 +2,37 @@ import './CostForm.css'
 import {useState} from "react";
 function CostForm() {
 
-    const [name , setName] = useState('');
-    const [sum , setSum] = useState('');
-    const [date , setDate] = useState('');
+    // const [name , setName] = useState('');
+    // const [sum , setSum] = useState('');
+    // const [date , setDate] = useState('');
+
+   const [userInput, setUserInput] = useState({
+        name: '',
+        sum:'',
+        date: ''
+    })
 
     const nameChangeHandler = function (e){
-        setName(e.target.value)
+        // setName(e.target.value)
+        setUserInput({
+            ...userInput,
+            name:e.target.value,
+        })
     }
     const dateChangeHandler = function (e){
-        setDate(e.target.value)
+        // setDate(e.target.value)
+        setUserInput({
+            ...userInput,
+            date:e.target.value,
+        })
     }
 
     const sumChangeHandler = function (e){
-        setSum(e.target.value)
+        // setSum(e.target.value)
+        setUserInput({
+            ...userInput,
+            sum:e.target.value,
+        })
     }
 
     const confirmForm = function (e) {
@@ -22,6 +40,7 @@ function CostForm() {
         console.log('confirmForm')
 
     }
+    console.log(userInput)
 
     return (
         <form>
