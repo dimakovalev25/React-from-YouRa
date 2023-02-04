@@ -3,15 +3,14 @@ import './NewCost.css'
 import CostForm from "./CostForm";
 import Card from "../UI/Card";
 
-function NewCost() {
+function NewCost(props) {
 
     const saveCostDataHandler = function (inputCostData) {
         const CostData = {
             ...inputCostData,
             id: Math.random().toString(),
         }
-
-        console.log(CostData)
+        props.onAddCost(CostData)
     }
 
     return (

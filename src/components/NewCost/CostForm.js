@@ -39,9 +39,9 @@ function CostForm(props) {
         e.preventDefault()
         // console.log('confirmForm')
         const costData = {
-            name: name,
-            sum: sum,
-            date: new Date(date)
+            costDate: new Date(date),
+            description: name,
+            amount: sum,
         }
         // console.log(costData);
         props.onSaveCostData(costData);
