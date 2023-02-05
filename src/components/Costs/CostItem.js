@@ -24,14 +24,14 @@ function CostItem(props) {
                     <div className={'cost-item__price'}>{amount}$</div>
                 </div>
                 <div>
-                    <button
-                        onClick={incAmount}
-                        className={'cost-item__price'}>+
-                    </button>
-                    <button
-                        onClick={decAmount}
-                        className={'cost-item__price'}>-
-                    </button>
+                    {/*<button*/}
+                    {/*    onClick={incAmount}*/}
+                    {/*    className={'cost-item__price'}>+*/}
+                    {/*</button>*/}
+                    {/*<button*/}
+                    {/*    onClick={decAmount}*/}
+                    {/*    className={'cost-item__price'}>-*/}
+                    {/*</button>*/}
                 </div>
             </Card>
         </>

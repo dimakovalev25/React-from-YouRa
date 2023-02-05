@@ -2,7 +2,6 @@ import './CostForm.css'
 import {useState} from "react";
 
 function CostForm(props) {
-    // console.log(props)
 
     const [name, setName] = useState('');
     const [sum, setSum] = useState('');
@@ -51,6 +50,10 @@ function CostForm(props) {
 
     }
 
+    const newCostChangeFlag = function () {
+        props.changeFlag()
+    }
+
     return (
         <form onSubmit={confirmForm}>
             <div className={'new-cost__controls'}>
@@ -70,7 +73,10 @@ function CostForm(props) {
 
                 </div>
                 <div className={'new-cost__actions'}>
-                    <button type={"submit"}>ADD</button>
+                    <button onClick={newCostChangeFlag} type={"submit"}>ADD</button>
+                </div>
+                <div className={'new-cost__actions'}>
+                    <button onClick={newCostChangeFlag} type={"submit"}>Cancel</button>
                 </div>
             </div>
 

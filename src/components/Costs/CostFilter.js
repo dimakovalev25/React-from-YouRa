@@ -4,7 +4,7 @@ const CostsFilter = (props) => {
     const yearChange = function (e) {
         const year = e.target.value;
         props.onCheckYear(year)
-        console.log(year)
+
     }
 
     return (

@@ -47,10 +47,14 @@ function App() {
     const [purchase, setPurchase] = useState(costs);
     // purchase.map(i => console.log((i.costDate).toString().includes('2022')));
     // console.log(purchase[0].costDate);
+    // console.log(purchase.length)
     const addCostHandler = function (data) {
-        setPurchase([...purchase,
-            data]);
+        costs.push(data)
+        setPurchase(prevCost => {
+            return [...prevCost, data]
+        });
     }
+
 
     const checkYear2 = function (data) {
         const year = data;
